@@ -41,3 +41,12 @@ To speed this up, I implemented Montgomery reduction. During modular exponentiat
 This current implementation uses std::mt19937_64 as a seed for the random number generator.
 This is not technically crytographically secure. 
 
+
+### Compilation
+
+Run makefile in /cppAlgos or the following command: 
+g++ -O2 -o m bigInt/bigInt.cpp randomNumberGenerator/randomNumberGenerator.cpp decrypt.cpp demo cpp eea.cpp encrypt.cpp keys.cpp miller_rabin.cpp modexp.cpp pickPrime.cpp commonPrimeCheck.cpp montgomeryConstant.cpp montgomeryModularExpo.cpp montgomeryReduction.cpp
+
+Alternatively, run m.exe
+
+
