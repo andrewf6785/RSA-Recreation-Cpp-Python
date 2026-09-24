@@ -47,6 +47,4 @@ This is not technically cryptographically secure.
 Run make from /cppAlgos or the following command: 
 g++ -O2 -o m bigInt/bigInt.cpp randomNumberGenerator/randomNumberGenerator.cpp decrypt.cpp demo.cpp eea.cpp encrypt.cpp keys.cpp miller_rabin.cpp modexp.cpp pickPrime.cpp commonPrimeCheck.cpp montgomeryConstant.cpp montgomeryModularExpo.cpp montgomeryReduction.cpp
 
-Alternatively, run m.exe
-
-
+Then, run m.exe
