@@ -1,4 +1,5 @@
 # RECREATING RSA ENCRYPTION
+After studying discrete math for a few semesters, I became somewhat fascinated with RSA public key encryption and, wishing to understand the math behind it better, decided to try to recreate it using realistically sized integers. 
 
 First I created a template for this project in python, and it went very smoothly because python automatically handles big integers all on its own.
 
