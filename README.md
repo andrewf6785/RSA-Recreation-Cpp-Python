@@ -37,10 +37,15 @@ When the initial demo was completed, it was very very slow as I was originally p
 
 To speed this up, I implemented Montgomery reduction. During modular exponentiation, values are converted into Montgomery form and kept there throughout the repeated multiplications and squarings. Montgomery reduction replaces the expensive division-based reductions in that loop with multiplication, addition, and byte shifts. The final result is then converted back to an ordinary integer.
 
-### Notes on Random Number Generation:
+### Notes on Random Number Generation and OAEP:
 
 This current implementation uses std::mt19937_64 as a seed for the random number generator.
 This is not technically cryptographically secure. 
+
+This implementation does not currently OAEP, or Optimal Asymmetric Encryption Padding. Without OAEP, traditional RSA is malleable, meaning that an attacker can modify ciphertext in a structured way so when it is decrypted the resulting plaintext is altered predictably.
+I became quite interested in this, and created an example of using an Adaptive Chosen Ciphertext Attack (IND-CCA2) to attack this implementation of RSA. That can be found here: https://github.com/andrewf6785/Example-RSA-Attack
+
+I would very much like to later implement OAEP in this implementation, along with a better random number generation method, because I think that would help me learn a lot more about both RSA and random number conditioning and use. 
 
 
 ### Compilation
