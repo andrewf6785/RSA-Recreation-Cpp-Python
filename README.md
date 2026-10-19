@@ -42,7 +42,7 @@ To speed this up, I implemented Montgomery reduction. During modular exponentiat
 This current implementation uses std::mt19937_64 as a seed for the random number generator.
 This is not technically cryptographically secure. 
 
-This implementation does not currently OAEP, or Optimal Asymmetric Encryption Padding. Without OAEP, traditional RSA is malleable, meaning that an attacker can modify ciphertext in a structured way so when it is decrypted the resulting plaintext is altered predictably.
+This implementation does not currently use OAEP, or Optimal Asymmetric Encryption Padding. Without OAEP, traditional RSA is malleable, meaning that an attacker can modify ciphertext in a structured way so when it is decrypted the resulting plaintext is altered predictably.
 I became quite interested in this, and created an example of using an Adaptive Chosen Ciphertext Attack (IND-CCA2) to attack this implementation of RSA. That can be found here: https://github.com/andrewf6785/Example-RSA-Attack
 
 I would very much like to later implement OAEP in this implementation, along with a better random number generation method, because I think that would help me learn a lot more about both RSA and random number conditioning and use. 
