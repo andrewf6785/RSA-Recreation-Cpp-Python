@@ -26,7 +26,7 @@ This part of the project started with me realizing that C++ has no native abilit
 
 ### How it works:
 
-`largeInt` stores a n bit integer in a vector of `uint8_t` variables, using little endian order to make arithmetic easier. Each byte represents a base-256 digit (with the most significant digit first).
+`largeInt` stores a n bit integer in a vector of `uint8_t` variables, using little endian order to make arithmetic easier. Each byte represents a base-256 digit (with the least significant digit first).
 Operations such as `+` and `-` are performed like regular step by step addition and subtraction, utilizing a carry variable or a borrow variable.
 
 Operations like `*` and `/` again use familiar methods (although specifically, division uses binary long division), and division and modulus are implemented as `divmod` to avoid calling division again if the remainder is also required.
